@@ -23,3 +23,8 @@ blocks:
         - name: Integration Test
           commands:
             - echo "Integration test"
+promotions:
+  - name: Deploy to staging
+    pipeline_file: pipeline_2.yml
+    auto_promote:
+      when: branch = 'semaphore-test' AND result = 'passed'
