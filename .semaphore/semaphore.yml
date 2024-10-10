@@ -11,6 +11,11 @@ blocks:
         - name: 'Job #1'
           commands:
             - checkout
+        - name: 'Job #2'
+          commands:
+            - echo $API_KEY
+      secrets:
+        - name: Open Weather API
   - name: Tests
     task:
       prologue:
